@@ -1,0 +1,7 @@
+1. MD error handler smo preneli iz Task proj - sa not found hendlerom - tamo je objasnjenje
+2. Konekcija sa MongoDB 
+    - u .env fajlu varijabla MONGO_URI= ... link sa Mongodb sajta za konekciju
+    - Dati naziv bazi
+    - i uneti password - PW: mVYbKNlc6fD5nlnp - user djeka78 - pristup korisnika
+
+3:26
