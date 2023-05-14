@@ -3,25 +3,6 @@
     - u .env fajlu varijabla MONGO_URI= ... link sa Mongodb sajta za konekciju
     - Dati naziv bazi
     - i uneti password - PW: mVYbKNlc6fD5nlnp - user djeka78 - pristup korisnika
-3. Async wraper - ovde umesto da rucno pravimo uvodimo modul koji to radi umesto nas
-    -express-async-errors
-    - nemora next() za razliku od rucno pravljenog
-4. Model za komunikaciju sa bazom
-5. Schema - neke napomene
-    required: [true, 'product name must be provided'] - polje obavezno, prvi el true/false, drugi msg error
-    default: false - default vrednost ako nije navedeno drugo
-    default: Date.now() - default trenutni Date/time ako je type: Date 
-    enum: ['ikea', 'liddy', 'caressa', 'marcos'] - kao select opcija, biranje izmedju mogucih/inclusive vrednosti
-6. Popunjavanje baze bez forme, populate.js i products.json
-    -stvar sa AWAIT - prvo zavrsi ovo pa onda nastavi drugo
-    await Product.deleteMany()
-    await Product.create(jsonProducts)
-7. Izlazak iz procesa - process.exit(0) jer nemoramo da imamo fajl u procesu ako smo zavrsili posao - (1) za error
-    dakle kada pokrenemo node, odmah izadje tj zavrsi proces kada uraddi sta treba!
-8. Mongoose QUERIES za pretragu baze - dokumentacija modula
-9. Importujemo model u kontroler radi preuzimanja tj komunikacije sa bazom
-10. Product.find({ featured: true, name: 'vase table'}) //moze biti vise uslova pretrage
-    await Product.find(req.query) preko search parametara - test u - REQ.QUERY objekat, params u postmanu
-11. Pristup preko parametara idemo preko novog kreiranog objekta u koji ubacujemo query parametre ako ih ima
 
 4:00+ if(featured)
+11. Komp dole!
