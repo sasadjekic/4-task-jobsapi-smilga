@@ -1,6 +1,7 @@
 //Za koriscenje ENV varijabli - dotenv modul - objasnjenje u prethodnom projektu - config za process
 require('dotenv').config()
-//async error
+//async error - import modula za async wrapper
+require('express-async-errors')
 
 const express = require('express');
 const app = express();
