@@ -23,7 +23,12 @@
 10. Product.find({ featured: true, name: 'vase table'}) //moze biti vise uslova pretrage
     await Product.find(req.query) preko search parametara - test u - REQ.QUERY objekat, params u postmanu
 11. Pristup preko parametara idemo preko novog kreiranog objekta u koji ubacujemo query parametre ako ih ima
-
-4:00+ if(featured)
+    U konkretnom slucaju, pokrice samo ono sto hocemo od parametara (bez obzira koliko ih ima u Req.query objektu)
+    U jednom slucaju imamo ternary odredjene vrednosti (kanalisemo ih). Ako prodje IF petlje i nista ne prodje
+    tj bude queryObject prazan onda vraca SVE kao rezultat 
+12.Mongodb Query operators - $lte. $exist, $regex - kao u Enki app
+    Product.find({name: {$regex: search, $options: 'i'}}) i to se kaci na name property u queryObject-u
+    Termin - query bilder ili Json doc obj
+13 Sortiranje preko chain metoda .find({}).sort('neko_polje') sa minusom za reverse ili npr .sort('-name price')
 
 
