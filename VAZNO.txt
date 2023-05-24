@@ -29,6 +29,11 @@
 12.Mongodb Query operators - $lte. $exist, $regex - kao u Enki app
     Product.find({name: {$regex: search, $options: 'i'}}) i to se kaci na name property u queryObject-u
     Termin - query bilder ili Json doc obj
-13 Sortiranje preko chain metoda .find({}).sort('neko_polje') sa minusom za reverse ili npr .sort('-name price')
-
-
+13. Sortiranje preko chain metoda .find({}).sort('neko_polje') sa minusom za reverse ili npr .sort('-name price')
+14. Selektovanje polja preko chain metoda .select('name price') - slicno kao sort sa poljima koje navodimo
+15. .limit(4) - broj rezultata - paginacija 
+16. .skip(5) - preskakanje rezultata broj - za paginaciju 
+QUERY - poenta je u prevodu url query parametara u mongoose operatere posebno kod numerik filtera
+17.Numeric filters - posebna prica - koristimo Operater map (objekat) i regex sa replaceom
+   prva faza - IZ - {{url2}}/products?numericFilters=price>30,rating>5 - U OVO - price-$gt-30,rating-$gt-5
+   dalje - SVE U KONTROLERU - product.js - dakle dalje je query obj. { price: { '$gt': 30 }, rating: { '$gte': 4 } }
